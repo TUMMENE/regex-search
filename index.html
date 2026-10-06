@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex Search – Tumi Menegalli</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Regex Search</h1>
+        <p class="subtitle">Cerca e valida testo con le espressioni regolari</p>
+
+        <!-- Cerca -->
+        <section class="card">
+            <h2>🔍 Cerca</h2>
+            <label for="pattern">Espressione regolare</label>
+            <div class="regex-row">
+                <span>/</span>
+                <input id="pattern" type="text" placeholder="es. \b\w+@\w+\.\w+" />
+                <span>/</span>
+                <label class="flag"><input id="flag-g" type="checkbox" checked /> g</label>
+                <label class="flag"><input id="flag-i" type="checkbox" /> i</label>
+            </div>
+            <p id="error" class="error"></p>
+
+            <label for="text">Testo</label>
+            <textarea id="text" rows="6" placeholder="Incolla qui il tuo testo..."></textarea>
+
+            <p id="count" class="count">0 risultati</p>
+            <div id="result" class="result"></div>
+        </section>
+
+        <!-- Valida -->
+        <section class="card">
+            <h2>✅ Valida</h2>
+            <div class="presets">
+                <button data-type="email">Email</button>
+                <button data-type="phone">Telefono CH</button>
+                <button data-type="cap">CAP</button>
+                <button data-type="url">URL</button>
+            </div>
+            <input id="validate-input" type="text" placeholder="Scegli un tipo e scrivi qui..." />
+            <p id="validate-result" class="validate-result"></p>
+        </section>
+    </main>
+
+    <footer>
+        Sviluppato da
+        <a href="https://github.com/TUMMENE" target="_blank">Tumi Menegalli</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
